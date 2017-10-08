@@ -158,8 +158,7 @@ table tbody tr td {
 @media (min-width: 641px) {
   .alignleft {
     margin-right: 30px;
-    float: left;
-    clear: both; } }
+    float: left; } }
 
 @media (min-width: 641px) {
   .aligncenter {
@@ -171,8 +170,7 @@ table tbody tr td {
 @media (min-width: 641px) {
   .alignright {
     margin-left: 30px;
-    float: right;
-    clear: both; } }
+    float: right; } }
 
 .footer {
   width: 100%;
