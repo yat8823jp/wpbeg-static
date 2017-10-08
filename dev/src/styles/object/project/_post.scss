@@ -1,0 +1,106 @@
+.p-post {
+	margin-bottom: 50px;
+	@include breakpoint( tablet ) {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__ttl {
+		padding-left: 0;
+		margin-bottom: 10px;
+		font-size: 2.0rem;
+		letter-spacing: 1.6px;
+		line-height: 2.6rem;
+		border-left: none;
+		@include breakpoint( tablet ) {
+			margin-bottom: 15px;
+			font-size: 2.4rem;
+		}
+	}
+	&__meta {
+		margin-bottom: 10px;
+		@include breakpoint( tablet ) {
+			margin-bottom: 15px;
+		}
+		&__item {
+			margin-left: 0;
+			font-size: 1.2rem;
+			display: inline;
+			& .fa {
+				&::before {
+					color: #B2B2B2;
+					margin-right: 4px;
+				}
+			}
+		}
+		&__date {
+			margin-right: 10px;
+			@include breakpoint( tablet ) {
+				margin-right: 20px;
+			}
+		}
+		&__link {
+			margin-right: 10px;
+		}
+	}//&__meta
+	&__eyecatch {
+		margin-bottom: 10px;
+		@include breakpoint( tablet ) {
+			margin-bottom: 20px;
+		}
+	}
+	&__morelink {
+		width: 60px;
+		padding: 7px 30px;
+		margin: 0 0 0 auto;
+		text-decoration: none;
+		border: 1px solid #4E91BE;
+		font-size: 1.2rem;
+		border-radius: 20px;
+		display: block;
+	}
+	&__author {
+		width: 100%;
+		height: 100%;
+		padding: 15px;
+		border: 1px solid #C9C9C9;
+		background: #fff;
+		box-sizing: border-box;
+		&::after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+		&__ttl {
+			margin-bottom: 10px;
+			color: #95989A;
+			font-weight: bold;
+			font-size: 1.4rem;
+		}
+		&__ico {
+			margin-right: 15px;
+			margin-bottom: 15px;
+			float: left;
+			clear: left;
+			box-sizing: border-box;
+			@include breakpoint( tablet ) {
+				margin-bottom: 0;
+			}
+		}
+		&__name {
+			width: 60px;
+			margin-bottom: 12px;
+			display: inline-block;
+		}
+		&__comment {
+			margin-bottom: 0;
+			font-size: 1.4rem;
+			font-weight: normal;
+			float: left;
+			box-sizing: border-box;
+			@include breakpoint( tablet ) {
+				width: 390px;
+			}
+		}
+	}
+}

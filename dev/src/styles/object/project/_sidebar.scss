@@ -1,0 +1,53 @@
+.p-sidebar {
+	margin-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	@include breakpoint( tablet ) {
+		justify-content: space-around;
+		flex-wrap: nowrap;
+	}
+	@include breakpoint( pc ) {
+		margin-left: 100px;
+		// float: left;
+		display: block;
+	}
+	.widget {
+		width: 50%;
+		margin-bottom: 40px;
+		text-align: center;
+		@include breakpoint( tablet ) {
+			margin-bottom: 70px;
+		}
+		@include breakpoint( pc ) {
+			width: auto;
+			text-align: left;
+		}
+		h2 {
+			margin-bottom: 20px;
+			color: #4E91BE;
+			font-weight: normal;
+		}
+		& .fa {
+			margin-right: 5px;
+			color: #B2B2B2;
+			@include breakpoint( tablet ) {
+				margin-right: 10px;
+			}
+		}
+		ul {
+			li {
+				margin: auto auto 10px 24px;
+				margin-bottom: 10px;
+				list-style: none;
+				&::before {
+					content: '-';
+					margin-right: 7px;
+					display: inline-block;
+				}
+				a {
+				}
+			}
+		}
+	}
+}

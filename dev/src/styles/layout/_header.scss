@@ -1,0 +1,26 @@
+.header {
+	width: 100%;
+	text-align: center;
+	margin: 40px 0 0;
+	@include breakpoint( tablet ) {
+		margin-top: 60px;
+	}
+	@include breakpoint( pc ) {
+	}
+	@include breakpoint( wide ) {
+	}
+	@include breakpoint( full ) {
+	}
+	&__ttl {
+		margin-bottom: 5px;
+		font-size: 3.2rem;
+		@include breakpoint( tablet ) {
+			margin-bottom: 10px;
+		}
+	}
+	&__descrition {
+		margin-bottom: 30px;
+		font-size: 1.6rem;
+		color: #95989A;
+	}
+}

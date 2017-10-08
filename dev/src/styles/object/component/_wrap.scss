@@ -1,0 +1,13 @@
+.c-wrap {
+	flex: 1;
+	@include breakpoint( pc ) {
+		min-width: 960px;
+		margin: auto;
+		padding: 0 20px;
+	}
+	&::after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}

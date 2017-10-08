@@ -1,0 +1,11 @@
+.p-contents {
+	width: 100%;
+	margin-bottom: 50px;
+	@include breakpoint( tablet ){
+		width: 700px;
+		margin: auto auto 70px auto;
+	}
+	@include breakpoint( pc ){
+		margin: 0 0 70px;
+	}
+}

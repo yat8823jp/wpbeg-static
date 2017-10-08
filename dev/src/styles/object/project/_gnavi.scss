@@ -1,0 +1,41 @@
+.p-gnavi {
+	margin-bottom: 40px;
+	@include breakpoint( tablet ) {
+		margin-bottom: 60px;
+	}
+	&__menu {
+		display: flex;
+		justify-content: center;
+		&__item {
+			margin: 0 20px;
+			list-style: none;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			&:first-child {
+				margin-right: 20px;
+			}
+			a {
+				font-size: 1.6rem;
+				@include breakpoint( tablet ) {
+					font-size: 2.0rem;
+				}
+				text-decoration: none;
+				&:link, &:visited {
+					color: #B1B1B1;
+				}
+				&:hover, &:active {
+					color: #555;
+				}
+				&.is-active {
+					&:link, &:visited {
+						color: #555;
+					}
+				}
+			}
+		}
+	}
+}

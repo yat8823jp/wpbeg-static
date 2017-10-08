@@ -1,0 +1,8 @@
+{
+	"name": "サイト名",
+	"description": "サイト概要",
+	"keywords": "キーワード1, キーワード2",
+	"rootUrl": "//example.com/",
+	"ogpImage": "//example.com/images/og-image.jpg",
+	"favicon": "//example.com/images/favicon.ico"
+}

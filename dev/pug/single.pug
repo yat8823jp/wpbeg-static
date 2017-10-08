@@ -1,0 +1,156 @@
+extend includes/_layout
+append variables
+	//- Required
+	- var pageTitle= "single";
+	- var pageDescription= site.description;
+	- var pageKeywords= site.keywords;
+	//- Optional
+	- var pageOgpTitle= "";
+	- var pageOgpImage= site.ogpImage
+	- var pageLang= "ja";
+	- var pageOgpType= "website";
+	//- Not modified
+	- var pageUrl= site.relativePath;
+
+block content
+	.c-wrap
+		.c-grid
+			.p-contents
+				.p-post
+					h2.p-post__ttl: a( href="#" ) 記事タイトル
+					ul.p-post__meta
+						li.p-post__meta__item: date.p-post__meta__date 2017年10月31日
+						li.p-post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.p-post__meta__link( href="#" ) カテゴリ名
+						li.p-post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.p-post__meta__link( href="#" ) タグ名
+					img.p-post__eyecatch( src="/images/eyecatch/001.png" alt="アイキャッチ" )
+					p 本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。
+					h3 h3見出し
+					h4 h4見出し
+					h5 h5見出し
+					h6 h6見出し
+					hr
+					h3 段落
+					p 本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+					p 本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+					hr
+					h3 リストタイプ
+					h4 定義リスト
+					dl
+						dt 定義リスト
+						dd 定義リスト
+					ol
+						li 番号付きリスト
+						li 番号付きリスト
+							ol
+								li 番号付きリスト
+								li 番号付きリスト
+					ul
+						li 番号無しリスト
+						li 番号無しリスト
+							ul
+								li 番号無しリスト
+								li 番号無しリスト
+					h3 引用文章
+					blockquote 引用文章が入ります<br><span>http://wp.yat-net.com</span>
+					code= "<div>"
+							|
+							br
+							= "    <ul>"
+							|
+							br
+							= "         <li>text</li>"
+							|
+							br
+							= "        <li>text</li>"
+							|
+							br
+							= "        <li>text</li>"
+							|
+							br
+							= "    </ul>"
+							|
+							br
+							= "</div>"
+					img.alignleft( src="/images/004.png" alt='' width="400" )
+					p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					img.alignright( src="/images/005.png" alt='' width="400" )
+					p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					img.aligncenter( src="/images/006.png" alt='' width="400" )
+					p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					table
+						tbody
+							tr
+								th テーブルです
+								th テーブルです
+							tr
+								td テーブルです
+								td テーブルです
+					.p-post__author
+						p.p-post__author__ttl 投稿者
+						img.p-post__author__ico( src="/images/common/ico/author_default.png" alt="auhor" )
+						a.p-post__author__name( href="#" ) 投稿者名
+						p.p-post__author__comment 投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。
+				.p-comment
+					h2.p-comment__ttl Comment
+					ul.p-comment__list
+						li.p-comment__list__parent
+							.p-comment__body
+								.p-comment__body__author
+									img.p-comment__body__author__ico( src="/images/common/ico/author_default.png" alt="auhor" )
+									.p-comment__body__author__name ユーザー名
+									.p-comment__body__author__date Octber 11, 2017 at 11:45 pm
+								p コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。
+								.p-comment__body__post
+									a.p-comment__body__post__link 送信
+							ul.p-comment__list__child
+								li.p-comment__list__child__item
+									.p-comment__body
+										.p-comment__body__author
+											img.p-comment__body__author__ico( src="/images/common/ico/author_default.png" alt="auhor" )
+											.p-comment__body__author__name ユーザー名
+											.p-comment__body__author__date Octber 11, 2017 at 11:45 pm
+										p コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。
+										.p-comment__body__post
+											a.p-comment__body__post__link 送信
+					.p-comment__form
+						h2.p-comment__ttl Leave a Reply
+						p.p-comment__description メールアドレスが公開されることはありません。<br><span class="u-color--attention">*</span> が付いている欄は必須項目です
+						form#commentform( method="post" action="" )
+							label( for="name" ) name
+								span.u-color--attention *
+							input#author( name="name" type="text" value="" size="30" )
+							label( for="email" ) email
+								span.u-color--attention *
+							input#email( name="email" type="text" value="" size="30" )
+							label( for="website" ) website
+							input#website( name="website" type="text" value="" size="30" )
+							label( for="comment" ) comment
+								span.u-color--attention *
+							textarea#comment( name="comment" type="text" value="" size="30" )
+							input#submit( name="submit" type="submit" value="POST COMMENT" )
+
+
+			.p-pagenation
+				a.prevpostslink( rel="next" href="#" ) Prev
+				span.current 1
+				a.page.larger( title="Page 2" href="#" ) 2
+				a.page.larger( title="Page 3" href="#" ) 3
+				a.page.larger( title="Page 4" href="#" ) 4
+				a.page.larger( title="Page 5" href="#" ) 5
+				a.nextpostslink( rel="next" href="#" ) Next
+			.p-sidebar
+				.widget
+					h2: <i class="fa fa-folder-open" aria-hidden="true"></i> Category
+					ul
+						li: a( href="#" ) カテゴリ名
+						li: a( href="#" ) カテゴリ名
+				.widget
+					h2: <i class="fa fa-tags" aria-hidden="true"></i> Tag
+					ul
+						li: a( href="#" ) タグ名
+						li: a( href="#" ) タグ名
+				.widget
+					h2: <i class="fa fa-archive" aria-hidden="true"></i> Archive
+					ul
+						li: a( href="#" ) 2017年10月
+						li: a( href="#" ) 2017年9月

@@ -1,0 +1,38 @@
+extend includes/_layout
+append variables
+	//- Required
+	- var pageTitle= "page";
+	- var pageDescription= site.description;
+	- var pageKeywords= site.keywords;
+	//- Optional
+	- var pageOgpTitle= "";
+	- var pageOgpImage= site.ogpImage
+	- var pageLang= "ja";
+	- var pageOgpType= "website";
+	//- Not modified
+	- var pageUrl= site.relativePath;
+
+block content
+	.c-wrap
+		.c-grid
+			.p-contents
+				.p-post
+					h2.p-post__ttl: a( href="#" ) このブログについて
+					img.p-post__eyecatch( src="/images/eyecatch/001.png" alt="アイキャッチ" )
+					p 本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+			.p-sidebar
+				.widget
+					h2: <i class="fa fa-folder-open" aria-hidden="true"></i> Category
+					ul
+						li: a( href="#" ) カテゴリ名
+						li: a( href="#" ) カテゴリ名
+				.widget
+					h2: <i class="fa fa-tags" aria-hidden="true"></i> Tag
+					ul
+						li: a( href="#" ) タグ名
+						li: a( href="#" ) タグ名
+				.widget
+					h2: <i class="fa fa-archive" aria-hidden="true"></i> Archive
+					ul
+						li: a( href="#" ) 2017年10月
+						li: a( href="#" ) 2017年9月
