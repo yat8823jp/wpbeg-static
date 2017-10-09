@@ -1,9 +1,9 @@
-
 p {
 	margin-bottom: 30px;
 	font-size: 1.4rem;
 	color: #777;
 	line-height: 1.5;
+	font-weight: 300;
 }
 
 h3 {
@@ -46,12 +46,13 @@ dl {
 	dt {
 		margin-bottom: 20px;
 		font-size: 1.6rem;
-		font-weight: bold;
+		font-weight: 500;
 	}
 	dd {
 		margin-left: 20px;
 		margin-bottom: 20px;
 		font-size: 1.6rem;
+		font-weight: 300;
 	}
 }
 ol, ul {
@@ -62,17 +63,20 @@ ol, ul {
 		margin-bottom: 20px;
 		margin-left: 40px;
 		font-size: 1.6rem;
+		font-weight: 300;
 	}
 }
 
 ol {
 	li {
 		list-style-type: decimal;
+		font-weight: 300;
 	}
 }
 ul {
 	li {
 		list-style-type: disc;
+		font-weight: 300;
 	}
 }
 blockquote {
@@ -80,6 +84,7 @@ blockquote {
 	margin: 0 0 30px;
 	line-height: 18px;
 	background: #F0F0F0;
+	font-weight: 300;
 	&::before {
 		content: '"';
 		margin-right: 5px;
@@ -98,6 +103,7 @@ code {
 	padding: 20px;
 	margin-bottom: 30px;
 	line-height: 18px;
+	font-weight: 300;
 	background: #F0F0F0;
 	display: block;
 }
@@ -110,12 +116,13 @@ table {
 		tr {
 			th {
 				padding: 10px;
-				font-weight: bold;
+				font-weight: 500;
 				font-size: 16px;
 				background: #fff;
 			}
 			td {
 				padding: 10px;
+				font-weight: 300;
 				background: #fff;
 			}
 		}

@@ -74,7 +74,7 @@
 		&__ttl {
 			margin-bottom: 10px;
 			color: #95989A;
-			font-weight: bold;
+			font-weight: 500;
 			font-size: 1.4rem;
 		}
 		&__ico {
@@ -95,11 +95,14 @@
 		&__comment {
 			margin-bottom: 0;
 			font-size: 1.4rem;
-			font-weight: normal;
+			font-weight: 200;
 			float: left;
 			box-sizing: border-box;
 			@include breakpoint( tablet ) {
-				width: 390px;
+				width: 600px;
+				margin-left: 75px;
+				box-sizing: border-box;
+				float: none;
 			}
 		}
 	}
