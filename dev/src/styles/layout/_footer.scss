@@ -3,12 +3,6 @@
 	text-align: center;
 	background: #5193BF;
 	box-sizing: border-box;
-	@include breakpoint( pc ){
-	}
-	@include breakpoint( wide ){
-	}
-	@include breakpoint( full ){
-	}
 	&__copyright {
 		height: 40px;
 		line-height: 40px;

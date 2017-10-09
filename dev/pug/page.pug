@@ -1,15 +1,15 @@
 extend includes/_layout
 append variables
-	//- Required
+	//- page information
 	- var pageTitle= "page";
 	- var pageDescription= site.description;
 	- var pageKeywords= site.keywords;
-	//- Optional
+	//- OGP
 	- var pageOgpTitle= "";
 	- var pageOgpImage= site.ogpImage
 	- var pageLang= "ja";
 	- var pageOgpType= "website";
-	//- Not modified
+	//- page URL
 	- var pageUrl= site.relativePath;
 
 block content

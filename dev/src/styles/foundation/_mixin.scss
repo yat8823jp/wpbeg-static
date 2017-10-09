@@ -10,29 +10,4 @@
 			@content ;
 		}
 	}
-	@if $point == wide {
-		@media ( min-width: 961px ) {
-			@content ;
-		}
-	}
-	@if $point == full {
-		@media ( min-width: 1200px ) {
-			@content ;
-		}
-	}
-}
-
-@mixin beforeafter {
-	content: "";
-	display: block;
-}
-
-@mixin clearfix {
-	content: "";
-	clear: both;
-	display: block;
-}
-
-@mixin opacity( $opacity, $color01:#000 ) {
-	background-color: rgba( $color01, $opacity );
 }
