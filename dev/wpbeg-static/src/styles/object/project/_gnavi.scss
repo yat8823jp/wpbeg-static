@@ -1,12 +1,14 @@
-.p-gnavi {
-	margin-bottom: 40px;
-	@include breakpoint( tablet ) {
-		margin-bottom: 60px;
+.header {
+	.menu-gmenu-container {
+		margin-bottom: 40px;
+		@include breakpoint( tablet ) {
+			margin-bottom: 60px;
+		}
 	}
-	&__menu {
+	.menu {
 		display: flex;
 		justify-content: center;
-		&__item {
+		&-item {
 			margin: 0 20px;
 			list-style: none;
 			&:first-child {
@@ -31,7 +33,9 @@
 				&:hover, &:active {
 					color: #555;
 				}
-				&.is-active {
+			}
+			&.current_page_item {
+				a {
 					&:link, &:visited {
 						color: #555;
 					}

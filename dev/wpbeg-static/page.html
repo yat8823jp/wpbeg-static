@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,32 +14,21 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="shortcut icon" href="//wp.yat-net.com/wpbeg-static/images/common/ico/favicon.ico">
-		<meta property="og:title" content="wpbeg-static">
-		<meta property="og:type" content="website">
-		<meta property="og:image" content="//wp.yat-net.com/wpbeg-static/images/ogp/og-image.jpg">
-		<meta property="og:url" content="//wp.yat-net.com/wpbeg-static/page.html">
-		<meta property="og:description" content="WordPress theme development static data for beginners">
-		<meta property="og:site_name" content="wpbeg-static">
-		<meta property="og:locale" content="ja">
-		<meta property="fb:admins" content="">
-		<meta property="fb:app_id" content="">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@">
 	</head>
 	<body>
 		<header class="header">
 			<h1 class="header__ttl"><a href="./">WPBEG<span class="header__ttl__sub">static</span></a></h1>
 			<p class="header__descrition">Just another WordPress site</p>
-			<form class="p-search-form">
+			<form class="p-search-form" id="searchform">
 				<input class="p-search-form__keyword" placeholder="キーワード">
-				<input class="p-search-form__submit" type="submit" value="検索">
+				<input class="p-search-form__submit" id="searchsubmit" type="submit" value="検索">
 			</form>
-			<nav class="p-gnavi">
-				<ul class="p-gnavi__menu">
-					<li class="p-gnavi__menu__item"><a href="index.html">Blog</a></li>
-					<li class="p-gnavi__menu__item"><a class="is-active" href="page.html">About</a></li>
+			<div class="menu-gmenu-container">
+				<ul class="menu">
+					<li class="menu-item"><a href="index.html">Blog</a></li>
+					<li class="menu-item current_page_item"><a href="page.html">About</a></li>
 				</ul>
-			</nav>
+			</div>
 		</header>
 		<div class="c-wrap">
 			<div class="c-grid">
