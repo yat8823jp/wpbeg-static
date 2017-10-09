@@ -5,17 +5,36 @@
 	@include breakpoint( tablet ) {
 		margin-top: 60px;
 	}
-	@include breakpoint( pc ) {
-	}
-	@include breakpoint( wide ) {
-	}
-	@include breakpoint( full ) {
-	}
 	&__ttl {
 		margin-bottom: 5px;
 		font-size: 3.2rem;
+		position: relative;
 		@include breakpoint( tablet ) {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
+		}
+		a {
+			text-decoration: none;
+			color: #555;
+			display: block;
+			&::first-letter {
+				color: #4E91BE;
+				&:hover, &:active {
+					color: #82C1EB;
+				}
+			}
+			&:hover, &:active {
+				color: #82C1EB;
+			}
+		}
+		&__sub {
+			margin-left: 0;
+			font-family: 'Sacramento', cursive;
+			font-size: 2.6rem;
+			font-style: italic;
+			color: #8B8B8B;
+			top: 15px;
+			transform: rotate( -15deg );
+			position: absolute;
 		}
 	}
 	&__descrition {

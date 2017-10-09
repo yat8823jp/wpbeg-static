@@ -213,11 +213,38 @@ table tbody tr td {
 .header__ttl {
   margin-bottom: 5px;
   font-size: 32px;
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  position: relative; }
 
 @media (min-width: 641px) {
   .header__ttl {
-    margin-bottom: 10px; } }
+    margin-bottom: 20px; } }
+
+.header__ttl a {
+  text-decoration: none;
+  color: #555;
+  display: block; }
+
+.header__ttl a:first-letter {
+  color: #4E91BE; }
+
+.header__ttl a:first-letter:hover, .header__ttl a:first-letter:active {
+  color: #82C1EB; }
+
+.header__ttl a:hover, .header__ttl a:active {
+  color: #82C1EB; }
+
+.header__ttl__sub {
+  margin-left: 0;
+  font-family: 'Sacramento', cursive;
+  font-size: 26px;
+  font-size: 2.6rem;
+  font-style: italic;
+  color: #8B8B8B;
+  top: 15px;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  position: absolute; }
 
 .header__descrition {
   margin-bottom: 30px;
@@ -605,7 +632,7 @@ table tbody tr td {
     box-sizing: border-box;
     float: none; } }
 
-.p-serch-form {
+.p-search-form {
   height: 33px;
   margin-bottom: 40px;
   display: -webkit-box;
@@ -616,13 +643,13 @@ table tbody tr td {
           justify-content: center; }
 
 @media (min-width: 641px) {
-  .p-serch-form {
+  .p-search-form {
     margin-top: 60px; } }
 
-.p-serch-form__keyword {
+.p-search-form__keyword {
   width: 189px;
   margin: 0;
-  padding: 0 10px;
+  padding: 10px;
   font-size: 13px;
   font-size: 1.3rem;
   border-radius: 20px 0 0 20px;
@@ -630,7 +657,10 @@ table tbody tr td {
   border-right: none;
   background: #F8F8F8; }
 
-.p-serch-form__submit {
+.p-search-form__keyword::-webkit-input-placeholder {
+  padding-top: 5px; }
+
+.p-search-form__submit {
   width: 48px;
   margin: 0;
   padding: 0;
@@ -647,7 +677,7 @@ table tbody tr td {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#d9d9d9',GradientType=0 );
   /* IE6-9 */ }
 
-.p-serch-form__submit:hover, .p-serch-form__submit:active {
+.p-search-form__submit:hover, .p-search-form__submit:active {
   cursor: pointer;
   background: #5193BF;
   color: #fff; }
