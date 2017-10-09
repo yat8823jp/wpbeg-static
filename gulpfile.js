@@ -137,7 +137,6 @@ gulp.task( 'imagemin', function() {
 gulp.task( 'html', function () {
 	return gulp.src( paths.rootDir + '/**/*.+(html|php)' )
 		.pipe( useref( {searchPath: ['.', 'dev']} ) )
-		.pipe( gulpif( '*.js', uglify() ) )
 		.pipe( gulpif( '*.css', minifyCss() ) )
 		.pipe( gulp.dest( paths.dstrootDir ) );
 });
@@ -194,12 +193,10 @@ gulp.task( 'default', ['browser-sync'], function() {
 	var bsList = [
 		paths.rootDir + paths.subDir + '/**/*.html',
 		paths.rootDir + paths.subDir + '/**/*.php',
-		paths.rootDir + paths.subDir + '/js/**/*.js',
 		paths.rootDir + paths.subDir + '/css/*.css'
 	];
 	gulp.watch( paths.rootDir + paths.subDir + '/pug/**/*.pug', ['pug'] );
 	gulp.watch( paths.rootDir + paths.subDir + '/src/styles/**/*.scss', ['scss'] );
-	gulp.watch( paths.rootDir + paths.subDir + '/src/scripts/**/*.js', ['browserify'] );
 	gulp.watch( paths.rootDir + paths.subDir + '/pug/**/*.json', ['pug'] );
 	gulp.watch( bsList, ['bs-reload'] );
 });
@@ -222,5 +219,5 @@ gulp.task( 'devcopy', function () {
 	}).pipe( gulp.dest( paths.dstrootDir ) );
 });
 gulp.task( 'build', ['clean'], function ( cb ) {
-	runSequence( 'scss', 'browserify', 'pug', ['html', 'imagemin', 'devcopy'], cb );
+	runSequence( 'scss', 'pug', ['html', 'imagemin', 'devcopy'], cb );
 });
