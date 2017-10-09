@@ -34,17 +34,18 @@ var gulp = require( 'gulp' ),
 	// watch = require('gulp-watch'),
 	paths = {
 		rootDir : 'dev',
+		subDir : '/wpbeg-static',
 		dstrootDir : 'htdocs',
-		srcDir : 'dev/images',
-		dstDir : 'htdocs/images',
+		srcDir : 'dev/wpbeg-static/images',
+		dstDir : 'htdocs/wpbeg-static/images',
 		serverDir : 'localhost',
-		json : 'dev/pug/_data'
+		json : 'dev/wpbeg-static/pug/_data'
 	};
 /*
  * Sass
  */
 gulp.task( 'scss', function() {
-	gulp.src( paths.rootDir + '/src/styles/**/*.scss' )
+	gulp.src( paths.rootDir + paths.subDir + '/src/styles/**/*.scss' )
 		.pipe( plumber ( {
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		} ) )
@@ -56,7 +57,7 @@ gulp.task( 'scss', function() {
 			minifier: false //圧縮の有無 true/false
 		} ) )
 		.pipe( sourcemaps.write( './' ) )
-		.pipe( gulp.dest( paths.rootDir + '/css' ) );
+		.pipe( gulp.dest( paths.rootDir + paths.subDir + '/css' ) );
 });
 
 /*
@@ -69,10 +70,10 @@ gulp.task( 'browserify', function () {
 		bundleOption: {
 			cache: {}, packageCache: {}, fullPaths: false,
 			debug: true,
-			entries: paths.rootDir + '/src/scripts/main.js',
+			entries: paths.rootDir + paths.subDir + '/src/scripts/main.js',
 			extensions: [ 'js' ]
 		},
-		dest: paths.rootDir + '/js',
+		dest: paths.rootDir + paths.subDir + '/js',
 		filename: 'bundle.js'
 	};
 	var b = browserify ( option.bundleOption )
@@ -100,7 +101,7 @@ gulp.task( 'browserify', function () {
  * Pleeease
  */
 gulp.task( 'pleeease', function() {
-	return gulp.src( paths.rootDir + '/css/*.css' )
+	return gulp.src( paths.rootDir + paths.subDir + '/css/*.css' )
 		.pipe( pleeease( {
 			sass: true,
 			minifier: false //圧縮の有無 true/false
@@ -108,14 +109,14 @@ gulp.task( 'pleeease', function() {
 		.pipe( plumber ( {
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		} ) )
-		.pipe( gulp.dest( paths.rootDir + '/css' ) );
+		.pipe( gulp.dest( paths.rootDir + paths.subDir + '/css' ) );
 });
 
 /*
  * Imagemin
  */
 gulp.task( 'imagemin', function() {
-	var srcGlob = paths.srcDir + '/**/*.+(jpg|jpeg|png|gif|svg)';
+	var srcGlob = paths.srcDir + '/**/*.+(jpg|jpeg|png|gif|svg|ico)';
 	var dstGlob = paths.dstDir;
 	var imageminOptions = {
 		optimizationLevel: 7,
@@ -145,7 +146,7 @@ gulp.task( 'html', function () {
  * pug
  */
 gulp.task( 'pug', function() {
-	gulp.src( [ paths.rootDir + '/pug/**/*.pug', '!' + paths.rootDir + '/pug/**/_*.pug' ]  )
+	gulp.src( [ paths.rootDir + paths.subDir + '/pug/**/*.pug', '!' + paths.rootDir + paths.subDir + '/pug/**/_*.pug' ]  )
 		.pipe( plumber( {
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		} ) )
@@ -158,7 +159,7 @@ gulp.task( 'pug', function() {
 			{ pretty: '\t' },
 			{ ext: '.html' }
 		 ) )
-		.pipe( gulp.dest( paths.rootDir ) );
+		.pipe( gulp.dest( paths.rootDir + paths.subDir ) );
 } );
 
 
@@ -191,15 +192,15 @@ gulp.task( 'setWatch', function () {
  */
 gulp.task( 'default', ['browser-sync'], function() {
 	var bsList = [
-		paths.rootDir + '/**/*.html',
-		paths.rootDir + '/**/*.php',
-		paths.rootDir + '/js/**/*.js',
-		paths.rootDir + '/css/*.css'
+		paths.rootDir + paths.subDir + '/**/*.html',
+		paths.rootDir + paths.subDir + '/**/*.php',
+		paths.rootDir + paths.subDir + '/js/**/*.js',
+		paths.rootDir + paths.subDir + '/css/*.css'
 	];
-	gulp.watch( paths.rootDir + '/pug/**/*.pug', ['pug'] );
-	gulp.watch( paths.rootDir + '/src/styles/**/*.scss', ['scss'] );
-	gulp.watch( paths.rootDir + '/src/scripts/**/*.js', ['browserify'] );
-	gulp.watch( paths.rootDir + '/pug/**/*.json', ['pug'] );
+	gulp.watch( paths.rootDir + paths.subDir + '/pug/**/*.pug', ['pug'] );
+	gulp.watch( paths.rootDir + paths.subDir + '/src/styles/**/*.scss', ['scss'] );
+	gulp.watch( paths.rootDir + paths.subDir + '/src/scripts/**/*.js', ['browserify'] );
+	gulp.watch( paths.rootDir + paths.subDir + '/pug/**/*.json', ['pug'] );
 	gulp.watch( bsList, ['bs-reload'] );
 });
 
@@ -212,9 +213,9 @@ gulp.task( 'devcopy', function () {
 		paths.rootDir + '/**/*.*',
 		// '!'+ paths.rootDir + '/css/**',
 		// '!'+ paths.rootDir + '/js/**',
-		'!'+ paths.rootDir + '/pug/**',
-		'!'+ paths.rootDir + '/src/**',
-		'!'+ paths.rootDir + '/images/**',
+		'!'+ paths.rootDir + paths.subDir + '/pug/**',
+		'!'+ paths.rootDir + paths.subDir + '/src/**',
+		'!'+ paths.rootDir + paths.subDir + '/images/**',
 		'!'+ paths.rootDir + '/**/*.html'
 	], {
 		dot: true

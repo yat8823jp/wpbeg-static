@@ -1,8 +1,0 @@
-{
-	"name": "wpbeg-static",
-	"description": "WordPress theme development static data for beginners",
-	"keywords": "WordPress, Theme, development",
-	"rootUrl": "//example.com/",
-	"ogpImage": "//example.com/images/og-image.jpg",
-	"favicon": "//example.com/images/common/ico/favicon.ico"
-}

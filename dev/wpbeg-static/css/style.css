@@ -452,7 +452,7 @@ table tbody tr td {
 
 @media (min-width: 769px) {
   .p-pagenation {
-    width: 500px;
+    width: 700px;
     margin-left: 0;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;

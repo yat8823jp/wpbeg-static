@@ -1,0 +1,8 @@
+{
+	"name": "wpbeg-static",
+	"description": "WordPress theme development static data for beginners",
+	"keywords": "WordPress, Theme, development",
+	"rootUrl": "//wp.yat-net.com/wpbeg-static/",
+	"ogpImage": "//wp.yat-net.com/wpbeg-static/images/ogp/og-image.jpg",
+	"favicon": "//wp.yat-net.com/wpbeg-static/images/common/ico/favicon.ico"
+}
