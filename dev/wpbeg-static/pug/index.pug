@@ -16,41 +16,36 @@ block content
 	.c-wrap
 		.c-grid
 			.p-contents
-				.p-post
-					h2.p-post__ttl: a( href="single.html" ) 記事タイトル
-					ul.p-post__meta
-						li.p-post__meta__item: date.p-post__meta__date 2017年10月31日
-						li.p-post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.p-post__meta__link( href="#" ) カテゴリ名
-						li.p-post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.p-post__meta__link( href="#" ) タグ名
+				.post
+					h2.post__ttl: a( href="single.html" ) 記事タイトル
+					ul.post__meta
+						li.post__meta__item: date.post__meta__date 2017年10月31日
+						li.post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.post__meta__link( href="#" ) カテゴリ名
+						li.post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.post__meta__link( href="#" ) タグ名
 					img.attachment-post-thumbnail( src="images/eyecatch/001.png" alt="アイキャッチ" )
 					p 本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。
 						a.more-link( href="single.html" ) 続きを読む
-				.p-post
-					h2.p-post__ttl: a( href="single.html" ) 長い記事のタイトル長い記事のタイトル長い記事のタイトル長い記事のタイトル長い記事のタイトル長い記事のタイトル長い記事のタイトル
-					ul.p-post__meta
-						li.p-post__meta__item: date.p-post__meta__date 2017年10月31日
-						li.p-post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.p-post__meta__link( href="#" ) カテゴリ名
-						li.p-post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.p-post__meta__link( href="#" ) タグ名
+				.post
+					h2.post__ttl: a( href="single.html" ) 長い記事のタイトル長い記事のタイトル長い記事のタイトル長い記事のタイトル長い記事のタイトル長い記事のタイトル長い記事のタイトル
+					ul.post__meta
+						li.post__meta__item: date.post__meta__date 2017年10月31日
+						li.post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.post__meta__link( href="#" ) カテゴリ名
+						li.post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.post__meta__link( href="#" ) タグ名
 					img.attachment-post-thumbnail( src="images/eyecatch/002.png" alt="アイキャッチ" )
 					p 本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。
 						a.more-link( href="single.html" ) 続きを読む
-				.p-post
-					h2.p-post__ttl: a( href="single.html" ) 記事タイトル
-					ul.p-post__meta
-						li.p-post__meta__item: date.p-post__meta__date 2017年10月31日
-						li.p-post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.p-post__meta__link( href="#" ) カテゴリ名
-						li.p-post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.p-post__meta__link( href="#" ) タグ名
+				.post
+					h2.post__ttl: a( href="single.html" ) 記事タイトル
+					ul.post__meta
+						li.post__meta__item: date.post__meta__date 2017年10月31日
+						li.post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.post__meta__link( href="#" ) カテゴリ名
+						li.post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.post__meta__link( href="#" ) タグ名
 					img.attachment-post-thumbnail( src="images/eyecatch/003.png" alt="アイキャッチ" )
 					p 本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。
 						a.more-link( href="single.html" ) 続きを読む
-			.p-pagenation
-				a.prevpostslink( rel="next" href="#" ) Prev
-				span.current 1
-				a.page.larger( title="Page 2" href="#" ) 2
-				a.page.larger( title="Page 3" href="#" ) 3
-				a.page.larger( title="Page 4" href="#" ) 4
-				a.page.larger( title="Page 5" href="#" ) 5
-				a.nextpostslink( rel="next" href="#" ) Next
+			ul.p-pagenation
+				li.prevpostslink: a( rel="next" href="#" ) Prev
+				li.nextpostslink: a( rel="next" href="#" ) Next
 			.p-sidebar
 				.widget
 					h2: <i class="fa fa-folder-open" aria-hidden="true"></i> Category
@@ -59,9 +54,22 @@ block content
 						li: a( href="#" ) カテゴリ名
 				.widget
 					h2: <i class="fa fa-tags" aria-hidden="true"></i> Tag
-					ul
-						li: a( href="#" ) タグ名
-						li: a( href="#" ) タグ名
+					.tagcloud
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
+
 				.widget
 					h2: <i class="fa fa-archive" aria-hidden="true"></i> Archive
 					ul

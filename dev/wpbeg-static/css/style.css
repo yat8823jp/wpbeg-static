@@ -505,6 +505,12 @@ table tbody tr td {
   .p-pagenation a {
     font-size: 2.0rem; } }
 
+.p-pagenation .prevpostslink,
+.p-pagenation .nextpostslink {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 .p-pagenation .current {
   width: 27px;
   height: 27px;
@@ -514,14 +520,14 @@ table tbody tr td {
   display: inline-block;
   text-align: center; }
 
-.p-post {
+.post {
   margin-bottom: 50px; }
 
 @media (min-width: 641px) {
-  .p-post:last-child {
+  .post:last-child {
     margin-bottom: 0; } }
 
-.p-post__ttl {
+.post__ttl {
   padding-left: 0;
   margin-bottom: 10px;
   font-size: 20px;
@@ -532,38 +538,38 @@ table tbody tr td {
   border-left: none; }
 
 @media (min-width: 641px) {
-  .p-post__ttl {
+  .post__ttl {
     margin-bottom: 15px;
     font-size: 2.4rem; } }
 
-.p-post__meta {
+.post__meta {
   margin-bottom: 10px; }
 
 @media (min-width: 641px) {
-  .p-post__meta {
+  .post__meta {
     margin-bottom: 15px; } }
 
-.p-post__meta__item {
+.post__meta__item {
   margin-left: 0;
   font-size: 12px;
   font-size: 1.2rem;
   display: inline; }
 
-.p-post__meta__item .fa:before {
+.post__meta__item .fa:before {
   color: #B2B2B2;
   margin-right: 4px; }
 
-.p-post__meta__date {
+.post__meta__date {
   margin-right: 10px; }
 
 @media (min-width: 641px) {
-  .p-post__meta__date {
+  .post__meta__date {
     margin-right: 20px; } }
 
-.p-post__meta__link {
+.post__meta__link {
   margin-right: 10px; }
 
-.p-post__author {
+.post__author {
   width: 100%;
   height: 100%;
   padding: 15px;
@@ -571,19 +577,19 @@ table tbody tr td {
   background: #fff;
   box-sizing: border-box; }
 
-.p-post__author:after {
+.post__author:after {
   content: "";
   clear: both;
   display: block; }
 
-.p-post__author__ttl {
+.post__author__ttl {
   margin-bottom: 10px;
   color: #95989A;
   font-weight: 500;
   font-size: 14px;
   font-size: 1.4rem; }
 
-.p-post__author__ico {
+.post__author__ico {
   margin-right: 15px;
   margin-bottom: 15px;
   float: left;
@@ -591,15 +597,15 @@ table tbody tr td {
   box-sizing: border-box; }
 
 @media (min-width: 641px) {
-  .p-post__author__ico {
+  .post__author__ico {
     margin-bottom: 0; } }
 
-.p-post__author__name {
+.post__author__name {
   width: 60px;
   margin-bottom: 12px;
   display: inline-block; }
 
-.p-post__author__comment {
+.post__author__comment {
   margin-bottom: 0;
   font-size: 14px;
   font-size: 1.4rem;
@@ -608,13 +614,13 @@ table tbody tr td {
   box-sizing: border-box; }
 
 @media (min-width: 641px) {
-  .p-post__author__comment {
+  .post__author__comment {
     width: 600px;
     margin-left: 75px;
     box-sizing: border-box;
     float: none; } }
 
-.p-post .more-link {
+.post .more-link {
   width: 60px;
   padding: 7px 30px;
   margin: 30px 0 50px auto;
@@ -625,11 +631,11 @@ table tbody tr td {
   border-radius: 20px;
   display: block; }
 
-.p-post .attachment-post-thumbnail {
+.post .attachment-post-thumbnail {
   margin-bottom: 10px; }
 
 @media (min-width: 641px) {
-  .p-post .attachment-post-thumbnail {
+  .post .attachment-post-thumbnail {
     margin-bottom: 20px; } }
 
 .p-search-form {
@@ -712,11 +718,12 @@ table tbody tr td {
 
 @media (min-width: 641px) {
   .p-sidebar .widget {
+    width: 160px;
     margin-bottom: 70px; } }
 
 @media (min-width: 769px) {
   .p-sidebar .widget {
-    width: auto;
+    width: 160px;
     text-align: left; } }
 
 .p-sidebar .widget h2 {
@@ -741,6 +748,12 @@ table tbody tr td {
   content: '-';
   margin-right: 7px;
   display: inline-block; }
+
+.p-sidebar .widget .tagcloud {
+  margin-left: 24px; }
+
+.p-sidebar .widget .tagcloud a {
+  margin: 0 5px 5px 0; }
 
 .u-color--attention {
   color: #E52B79; }

@@ -17,10 +17,11 @@
 		margin-bottom: 40px;
 		text-align: center;
 		@include breakpoint( tablet ) {
+			width: 160px;
 			margin-bottom: 70px;
 		}
 		@include breakpoint( pc ) {
-			width: auto;
+			width: 160px;
 			text-align: left;
 		}
 		h2 {
@@ -47,6 +48,12 @@
 				}
 				a {
 				}
+			}
+		}
+		.tagcloud {
+			margin-left: 24px;
+			a {
+				margin: 0 5px 5px 0;
 			}
 		}
 	}
