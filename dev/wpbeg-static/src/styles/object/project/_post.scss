@@ -10,7 +10,7 @@
 		margin-bottom: 10px;
 		font-size: 2.0rem;
 		letter-spacing: 1.6px;
-		line-height: 2.6rem;
+		line-height: 3.4rem;
 		border-left: none;
 		@include breakpoint( tablet ) {
 			margin-bottom: 15px;
@@ -43,22 +43,6 @@
 			margin-right: 10px;
 		}
 	}//&__meta
-	&__eyecatch {
-		margin-bottom: 10px;
-		@include breakpoint( tablet ) {
-			margin-bottom: 20px;
-		}
-	}
-	&__morelink {
-		width: 60px;
-		padding: 7px 30px;
-		margin: 0 0 0 auto;
-		text-decoration: none;
-		border: 1px solid $color--blue;
-		font-size: 1.2rem;
-		border-radius: 20px;
-		display: block;
-	}
 	&__author {
 		width: 100%;
 		height: 100%;
@@ -104,6 +88,22 @@
 				box-sizing: border-box;
 				float: none;
 			}
+		}
+	}
+	.more-link {
+		width: 60px;
+		padding: 7px 30px;
+		margin: 30px 0 50px auto;
+		text-decoration: none;
+		border: 1px solid $color--blue;
+		font-size: 1.2rem;
+		border-radius: 20px;
+		display: block;
+	}
+	.attachment-post-thumbnail {
+		margin-bottom: 10px;
+		@include breakpoint( tablet ) {
+			margin-bottom: 20px;
 		}
 	}
 }
