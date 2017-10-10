@@ -301,53 +301,66 @@ table tbody tr td {
 .p-comment__list {
   width: 100%; }
 
-.p-comment__list li {
+.p-comment__list .comment {
   list-style-type: none; }
 
-.p-comment__list__parent {
+.p-comment__list .parent {
   margin-left: 0; }
 
-.p-comment__list__child:before {
+.p-comment__list .children:before {
   content: "";
   width: 100%;
   margin-bottom: 30px;
   border-top: 1px solid #C9C9C9;
   display: block; }
 
-.p-comment__body__author {
+.p-comment .comment-body {
+  position: relative; }
+
+.p-comment .comment-body .comment-author {
   margin-bottom: 20px; }
 
-.p-comment__body__author:after {
+.p-comment .comment-body .comment-author:after {
   content: "";
   clear: both;
   display: block; }
 
-.p-comment__body__author__ico {
+.p-comment .comment-body .comment-author .avatar {
   margin-right: 15px;
   margin-bottom: 0;
   float: left;
   clear: left;
   box-sizing: border-box; }
 
-.p-comment__body__author__name {
+.p-comment .comment-body .comment-author cite {
   margin-bottom: 5px;
   font-weight: 500;
   font-size: 16px;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  font-style: normal; }
 
-.p-comment__body__author__date {
+.p-comment .comment-body .comment-author span {
+  margin-left: 5px; }
+
+.p-comment .comment-body .comment-meta {
+  display: inline;
+  top: 20px;
+  left: 75px;
+  position: absolute; }
+
+.p-comment .comment-body .comment-meta a {
   font-weight: 500;
   font-size: 14px;
   font-size: 1.4rem; }
 
-.p-comment__body p {
+.p-comment .comment-body p {
   clear: left; }
 
-.p-comment__body__post {
+.p-comment .comment-body .reply {
   width: 100%;
   text-align: right; }
 
-.p-comment__body__post__link {
+.p-comment .comment-body .reply .comment-reply-link {
   height: 26px;
   padding: 4px 15px;
   line-height: 26px;
@@ -360,7 +373,7 @@ table tbody tr td {
   text-align: center;
   box-sizing: border-box; }
 
-.p-comment__body__post__link:hover, .p-comment__body__post__link:active {
+.p-comment .comment-body .reply .comment-reply-link:hover, .p-comment .comment-body .reply .comment-reply-link:active {
   border-color: #82C1EB;
   cursor: pointer; }
 
@@ -572,6 +585,7 @@ table tbody tr td {
 .post__author {
   width: 100%;
   height: 100%;
+  margin-bottom: 30px;
   padding: 15px;
   border: 1px solid #C9C9C9;
   background: #fff;
@@ -589,7 +603,7 @@ table tbody tr td {
   font-size: 14px;
   font-size: 1.4rem; }
 
-.post__author__ico {
+.post__author .avatar {
   margin-right: 15px;
   margin-bottom: 15px;
   float: left;
@@ -597,7 +611,7 @@ table tbody tr td {
   box-sizing: border-box; }
 
 @media (min-width: 641px) {
-  .post__author__ico {
+  .post__author .avatar {
     margin-bottom: 0; } }
 
 .post__author__name {

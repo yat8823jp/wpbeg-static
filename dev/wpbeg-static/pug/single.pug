@@ -18,11 +18,11 @@ block content
 			.p-contents
 				.p-post
 					h2.p-post__ttl: a( href="#" ) 記事タイトル
-					ul.p-post__meta
-						li.p-post__meta__item: date.p-post__meta__date 2017年10月31日
-						li.p-post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.p-post__meta__link( href="#" ) カテゴリ名
-						li.p-post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.p-post__meta__link( href="#" ) タグ名
-					img.p-post__eyecatch( src="images/eyecatch/001.png" alt="アイキャッチ" )
+					ul.post__meta
+						li.post__meta__item: date.post__meta__date 2017年10月31日
+						li.post__meta__item: i( class="fa fa-folder" aria-hidden="true" ): a.post__meta__link( href="#" ) カテゴリ名
+						li.post__meta__item: i( class="fa fa-tag" aria-hidden="true" ): a.post__meta__link( href="#" ) タグ名
+					img.attachment-post-thumbnail( src="images/eyecatch/001.png" alt="アイキャッチ" )
 					p 本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。
 					h3 h3見出し
 					h4 h4見出し
@@ -85,33 +85,37 @@ block content
 							tr
 								td テーブルです
 								td テーブルです
-					.p-post__author
-						p.p-post__author__ttl 投稿者
-						img.p-post__author__ico( src="images/common/ico/author_default.png" alt="auhor" )
-						a.p-post__author__name( href="#" ) 投稿者名
-						p.p-post__author__comment 投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。
+					.post__author
+						p.post__author__ttl 投稿者
+						img.avatar( src="images/common/ico/author_default.png" alt="auhor" )
+						.post__author__name: a( href="#" ) 投稿者名
+						p.post__author__comment 投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。
 				.p-comment
 					h2.p-comment__ttl Comment
-					ul.p-comment__list
-						li.p-comment__list__parent
-							.p-comment__body
-								.p-comment__body__author
-									img.p-comment__body__author__ico( src="images/common/ico/author_default.png" alt="auhor" )
-									.p-comment__body__author__name ユーザー名
-									.p-comment__body__author__date Octber 11, 2017 at 11:45 pm
+					ol.p-comment__list
+						li.comment.parent
+							.comment-body
+								.comment-author
+									img.avatar( src="images/common/ico/author_default.png" alt="auhor" )
+									cite ユーザー名
+									span より:
+								.comment-meta.commentmetadata
+									a( href="#") Octber 11, 2017 at 11:45 pm
 								p コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。
-								.p-comment__body__post
-									a.p-comment__body__post__link 送信
-							ul.p-comment__list__child
-								li.p-comment__list__child__item
-									.p-comment__body
-										.p-comment__body__author
-											img.p-comment__body__author__ico( src="images/common/ico/author_default.png" alt="auhor" )
-											.p-comment__body__author__name ユーザー名
-											.p-comment__body__author__date Octber 11, 2017 at 11:45 pm
+								.reply
+									a.comment-reply-link( href="#" ) 返信
+							ul.children
+								li.comment.bypostauthor
+									.comment-body
+										.comment-author
+											img.avatar( src="images/common/ico/author_default.png" alt="auhor" )
+											cite ユーザー名
+											span より:
+										.comment-meta.commentmetadata
+											a( href="#" ) Octber 11, 2017 at 11:45 pm
 										p コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。
-										.p-comment__body__post
-											a.p-comment__body__post__link 送信
+										.reply
+											a.comment-reply-link( href="#" ) 返信
 					.p-comment__form
 						h2.p-comment__ttl Leave a Reply
 						p.p-comment__description メールアドレスが公開されることはありません。<br><span class="u-color--attention">*</span> が付いている欄は必須項目です
@@ -141,9 +145,9 @@ block content
 						li: a( href="#" ) カテゴリ名
 				.widget
 					h2: <i class="fa fa-tags" aria-hidden="true"></i> Tag
-					ul
-						li: a( href="#" ) タグ名
-						li: a( href="#" ) タグ名
+					.tagcloud
+						a.tag-cloud-link( href="#") タグ
+						a.tag-cloud-link( href="#") タグ
 				.widget
 					h2: <i class="fa fa-archive" aria-hidden="true"></i> Archive
 					ul

@@ -35,13 +35,13 @@
 				<div class="p-contents">
 					<div class="p-post">
 						<h2 class="p-post__ttl"><a href="#">記事タイトル</a></h2>
-						<ul class="p-post__meta">
-							<li class="p-post__meta__item">
-								<date class="p-post__meta__date">2017年10月31日</date>
+						<ul class="post__meta">
+							<li class="post__meta__item">
+								<date class="post__meta__date">2017年10月31日</date>
 							</li>
-							<li class="p-post__meta__item"><i class="fa fa-folder" aria-hidden="true"><a class="p-post__meta__link" href="#">カテゴリ名</a></i></li>
-							<li class="p-post__meta__item"><i class="fa fa-tag" aria-hidden="true"><a class="p-post__meta__link" href="#">タグ名</a></i></li>
-						</ul><img class="p-post__eyecatch" src="images/eyecatch/001.png" alt="アイキャッチ">
+							<li class="post__meta__item"><i class="fa fa-folder" aria-hidden="true"><a class="post__meta__link" href="#">カテゴリ名</a></i></li>
+							<li class="post__meta__item"><i class="fa fa-tag" aria-hidden="true"><a class="post__meta__link" href="#">タグ名</a></i></li>
+						</ul><img class="attachment-post-thumbnail" src="images/eyecatch/001.png" alt="アイキャッチ">
 						<p>本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。本文の抜粋が入ります。</p>
 						<h3>h3見出し</h3>
 						<h4>h4見出し</h4>
@@ -93,37 +93,38 @@
 								</tr>
 							</tbody>
 						</table>
-						<div class="p-post__author">
-							<p class="p-post__author__ttl">投稿者</p><img class="p-post__author__ico" src="images/common/ico/author_default.png" alt="auhor"><a class="p-post__author__name" href="#">投稿者名</a>
-							<p class="p-post__author__comment">投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。</p>
+						<div class="post__author">
+							<p class="post__author__ttl">投稿者</p><img class="avatar" src="images/common/ico/author_default.png" alt="auhor">
+							<div class="post__author__name"><a href="#">投稿者名</a></div>
+							<p class="post__author__comment">投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。投稿者紹介文章がはいります。</p>
 						</div>
 					</div>
 					<div class="p-comment">
 						<h2 class="p-comment__ttl">Comment</h2>
-						<ul class="p-comment__list">
-							<li class="p-comment__list__parent">
-								<div class="p-comment__body">
-									<div class="p-comment__body__author"><img class="p-comment__body__author__ico" src="images/common/ico/author_default.png" alt="auhor">
-										<div class="p-comment__body__author__name">ユーザー名</div>
-										<div class="p-comment__body__author__date">Octber 11, 2017 at 11:45 pm</div>
+						<ol class="p-comment__list">
+							<li class="comment parent">
+								<div class="comment-body">
+									<div class="comment-author"><img class="avatar" src="images/common/ico/author_default.png" alt="auhor">
+										<cite>ユーザー名</cite><span>より:</span>
 									</div>
+									<div class="comment-meta commentmetadata"><a href="#">Octber 11, 2017 at 11:45 pm</a></div>
 									<p>コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。</p>
-									<div class="p-comment__body__post"><a class="p-comment__body__post__link">送信</a></div>
+									<div class="reply"><a class="comment-reply-link" href="#">返信</a></div>
 								</div>
-								<ul class="p-comment__list__child">
-									<li class="p-comment__list__child__item">
-										<div class="p-comment__body">
-											<div class="p-comment__body__author"><img class="p-comment__body__author__ico" src="images/common/ico/author_default.png" alt="auhor">
-												<div class="p-comment__body__author__name">ユーザー名</div>
-												<div class="p-comment__body__author__date">Octber 11, 2017 at 11:45 pm</div>
+								<ul class="children">
+									<li class="comment bypostauthor">
+										<div class="comment-body">
+											<div class="comment-author"><img class="avatar" src="images/common/ico/author_default.png" alt="auhor">
+												<cite>ユーザー名</cite><span>より:</span>
 											</div>
+											<div class="comment-meta commentmetadata"><a href="#">Octber 11, 2017 at 11:45 pm</a></div>
 											<p>コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。</p>
-											<div class="p-comment__body__post"><a class="p-comment__body__post__link">送信</a></div>
+											<div class="reply"><a class="comment-reply-link" href="#">返信</a></div>
 										</div>
 									</li>
 								</ul>
 							</li>
-						</ul>
+						</ol>
 						<div class="p-comment__form">
 							<h2 class="p-comment__ttl">Leave a Reply</h2>
 							<p class="p-comment__description">メールアドレスが公開されることはありません。<br><span class="u-color--attention">*</span> が付いている欄は必須項目です</p>
@@ -152,10 +153,7 @@
 					</div>
 					<div class="widget">
 						<h2><i class="fa fa-tags" aria-hidden="true"></i> Tag</h2>
-						<ul>
-							<li><a href="#">タグ名</a></li>
-							<li><a href="#">タグ名</a></li>
-						</ul>
+						<div class="tagcloud"><a class="tag-cloud-link" href="#">タグ</a><a class="tag-cloud-link" href="#">タグ</a></div>
 					</div>
 					<div class="widget">
 						<h2><i class="fa fa-archive" aria-hidden="true"></i> Archive</h2>
@@ -168,7 +166,7 @@
 			</div>
 		</div>
 		<footer class="footer">
-			<p class="footer__copyright"><small>&copy; sample 2017</small></p>
+			<p class="footer__copyright"><small>&copy; WPBEG 2017</small></p>
 		</footer>
 	</body>
 </html>
