@@ -562,6 +562,32 @@ table tbody tr td {
   display: inline-block;
   text-align: center; }
 
+.page-split {
+  margin-bottom: 50px;
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+.page-split span {
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  background: #4E91BE;
+  display: inline-block; }
+
+.page-split a {
+  margin-right: 20px; }
+
+.page-split a span {
+  margin-right: 0;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  color: #4E91BE;
+  background-color: inherit; }
+
 .post {
   margin-bottom: 50px; }
 
