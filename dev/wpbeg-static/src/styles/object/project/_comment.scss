@@ -1,9 +1,12 @@
 .p-comment {
 	&__ttl {
+		margin-left: 0;
+		padding-left: 0;
 		font-size: 2.4rem;
 		font-weight: 500;
 		color: $color--blue;
 		margin-bottom: 20px;
+		border: none;
 	}
 	&__description {
 		margin-bottom: 24px;
@@ -86,44 +89,53 @@
 			}
 		}
 	}
-	&__form {
-		label {
-			color: #95989A;
-			font-size: 1.6rem;
-			font-weight: 500;
-			margin-bottom: 10px;
-			display: block;
-		}
-		input, textarea {
-			width: 100%;
-			height: 40px;
-			padding: 10px;
-			margin-bottom: 24px;
-			background: #F8F8F8;
-			border: 1px solid #CDCFD0;
-			display: block;
-			box-sizing: border-box;
-		}
-		textarea {
-			min-height: 200px;
-			margin-bottom: 40px;
-		}
-		input[type="submit"] {
-			width: 60%;
-			height: 40px;
-			margin: auto;
-			border: 1px solid #CDCFD0;
-			border-radius: 23px;
+}
+.comment-respond {
+	.comment-reply-title {
+		@extend .p-comment__ttl;
+	}
+	.comment-notes {
+		margin-bottom: 24px;
+	}
+	.required {
+		color: #E52B79;
+	}
+	label {
+		color: #95989A;
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin-bottom: 10px;
+		display: block;
+	}
+	input, textarea {
+		width: 100%;
+		height: 40px;
+		padding: 10px;
+		margin-bottom: 24px;
+		background: #F8F8F8;
+		border: 1px solid #CDCFD0;
+		display: block;
+		box-sizing: border-box;
+	}
+	textarea {
+		min-height: 200px;
+		margin-bottom: 40px;
+	}
+	input[type="submit"] {
+		width: 60%;
+		height: 40px;
+		margin: auto;
+		border: 1px solid #CDCFD0;
+		border-radius: 23px;
+		color: #fff;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#77bfef+0,5193bf+100 */
+		background: #77bfef; /* Old browsers */
+		background: linear-gradient(to bottom, #77bfef 0%,#5193bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77bfef', endColorstr='#5193bf',GradientType=0 ); /* IE6-9 */
+		&:hover, &:active {
+			cursor: pointer;
+			background: #5193BF;
 			color: #fff;
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#77bfef+0,5193bf+100 */
-			background: #77bfef; /* Old browsers */
-			background: linear-gradient(to bottom, #77bfef 0%,#5193bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77bfef', endColorstr='#5193bf',GradientType=0 ); /* IE6-9 */
-			&:hover, &:active {
-				cursor: pointer;
-				background: #5193BF;
-				color: #fff;
-			}
 		}
 	}
 }

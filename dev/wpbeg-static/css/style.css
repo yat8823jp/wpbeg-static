@@ -288,12 +288,15 @@ table tbody tr td {
   clear: both;
   display: block; }
 
-.p-comment__ttl {
+.p-comment__ttl, .comment-respond .comment-reply-title {
+  margin-left: 0;
+  padding-left: 0;
   font-size: 24px;
   font-size: 2.4rem;
   font-weight: 500;
   color: #4E91BE;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  border: none; }
 
 .p-comment__description {
   margin-bottom: 24px; }
@@ -377,7 +380,13 @@ table tbody tr td {
   border-color: #82C1EB;
   cursor: pointer; }
 
-.p-comment__form label {
+.comment-respond .comment-notes {
+  margin-bottom: 24px; }
+
+.comment-respond .required {
+  color: #E52B79; }
+
+.comment-respond label {
   color: #95989A;
   font-size: 16px;
   font-size: 1.6rem;
@@ -385,7 +394,7 @@ table tbody tr td {
   margin-bottom: 10px;
   display: block; }
 
-.p-comment__form input, .p-comment__form textarea {
+.comment-respond input, .comment-respond textarea {
   width: 100%;
   height: 40px;
   padding: 10px;
@@ -395,11 +404,11 @@ table tbody tr td {
   display: block;
   box-sizing: border-box; }
 
-.p-comment__form textarea {
+.comment-respond textarea {
   min-height: 200px;
   margin-bottom: 40px; }
 
-.p-comment__form input[type="submit"] {
+.comment-respond input[type="submit"] {
   width: 60%;
   height: 40px;
   margin: auto;
@@ -414,7 +423,7 @@ table tbody tr td {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77bfef', endColorstr='#5193bf',GradientType=0 );
   /* IE6-9 */ }
 
-.p-comment__form input[type="submit"]:hover, .p-comment__form input[type="submit"]:active {
+.comment-respond input[type="submit"]:hover, .comment-respond input[type="submit"]:active {
   cursor: pointer;
   background: #5193BF;
   color: #fff; }
@@ -768,8 +777,5 @@ table tbody tr td {
 
 .p-sidebar .widget .tagcloud a {
   margin: 0 5px 5px 0; }
-
-.u-color--attention {
-  color: #E52B79; }
 
 /*# sourceMappingURL=style.css.map */

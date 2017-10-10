@@ -116,22 +116,27 @@ block content
 										p コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。コメントが入ります。
 										.reply
 											a.comment-reply-link( href="#" ) 返信
-					.p-comment__form
-						h2.p-comment__ttl Leave a Reply
-						p.p-comment__description メールアドレスが公開されることはありません。<br><span class="u-color--attention">*</span> が付いている欄は必須項目です
+					.comment-respond
+						h3.comment-respond__ttl Leave a Reply
+						p.comment-notes メールアドレスが公開されることはありません。<br><span class="required">*</span> が付いている欄は必須項目です
 						form#commentform( method="post" action="" )
-							label( for="name" ) name
-								span.u-color--attention *
-							input#author( name="name" type="text" value="" size="30" )
-							label( for="email" ) email
-								span.u-color--attention *
-							input#email( name="email" type="text" value="" size="30" )
-							label( for="website" ) website
-							input#website( name="website" type="text" value="" size="30" )
-							label( for="comment" ) comment
-								span.u-color--attention *
-							textarea#comment( name="comment" type="text" value="" size="30" )
-							input#submit( name="submit" type="submit" value="POST COMMENT" )
+							p.comment-form-comment
+								label( for="name" ) name
+									span.required *
+								input#author( name="name" type="text" value="" size="30" )
+							p.comment-form-author
+								label( for="email" ) email
+									span.required *
+								input#email( name="email" type="text" value="" size="30" )
+							p.comment-form-email
+								label( for="website" ) website
+								input#website( name="website" type="text" value="" size="30" )
+							p.comment-form-url
+								label( for="comment" ) comment
+									span.required *
+									textarea#comment( name="comment" type="text" value="" size="30" )
+							p.form-submit
+								input#submit( name="submit" type="submit" value="POST COMMENT" )
 
 
 			.p-pagenation
