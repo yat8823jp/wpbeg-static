@@ -139,3 +139,23 @@
 		}
 	}
 }
+
+.comment-page-link {
+	margin-bottom: 30px;
+	font-size: 1.4rem;
+	.prev {
+		margin-right: 20px;
+	}
+	.page-numbers {
+		margin-right: 20px;
+	}
+	.current {
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		line-height: 25px;
+		color: #fff;
+		background: $color--blue;
+		display: inline-block;
+	}
+}

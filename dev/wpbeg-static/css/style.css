@@ -428,6 +428,26 @@ table tbody tr td {
   background: #5193BF;
   color: #fff; }
 
+.comment-page-link {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+.comment-page-link .prev {
+  margin-right: 20px; }
+
+.comment-page-link .page-numbers {
+  margin-right: 20px; }
+
+.comment-page-link .current {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  background: #4E91BE;
+  display: inline-block; }
+
 .p-contents {
   width: 100%;
   margin-bottom: 50px; }
