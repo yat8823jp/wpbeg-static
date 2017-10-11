@@ -563,7 +563,7 @@ table tbody tr td {
   text-align: center; }
 
 .page-split {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 14px;
   font-size: 1.4rem; }
 
@@ -640,7 +640,7 @@ table tbody tr td {
 .post__author {
   width: 100%;
   height: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   padding: 15px;
   border: 1px solid #C9C9C9;
   background: #fff;
@@ -706,6 +706,55 @@ table tbody tr td {
 @media (min-width: 641px) {
   .post .attachment-post-thumbnail {
     margin-bottom: 20px; } }
+
+.wp-caption {
+  font-size: 13px;
+  font-size: 1.3rem; }
+
+.wp-caption-text {
+  margin-top: -20px; }
+
+.sticky {
+  padding: 20px;
+  background: #f3f3f3; }
+
+.gallery-caption {
+  font-size: 13px;
+  font-size: 1.3rem; }
+
+.bypostauthor {
+  padding: 20px;
+  background: #f0f8ff; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 8.75px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
 
 .p-search-form {
   height: 33px;
