@@ -119,6 +119,14 @@
 .sticky {
 	padding: 20px;
 	background: #f3f3f3;
+	img {
+		@include breakpoint( tablet ) {
+			max-width: 660px;
+		}
+		@include breakpoint( pc ) {
+			max-width: 660px;
+		}
+	}
 }
 .gallery-caption {
 	font-size: 1.3rem;

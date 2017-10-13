@@ -6,6 +6,13 @@ p {
 	font-weight: 300;
 }
 
+h1 {
+	margin-bottom: 30px;
+}
+
+h2 {
+	margin-bottom: 30px;
+}
 h3 {
 	margin-bottom: 30px;
 	font-size: 2.2rem;
@@ -85,6 +92,7 @@ blockquote {
 	line-height: 18px;
 	background: #F0F0F0;
 	font-weight: 300;
+	font-style: italic;
 	&::before {
 		content: '"';
 		margin-right: 5px;
@@ -97,10 +105,15 @@ blockquote {
 	}
 }
 img {
+	max-width: 100%;
 	margin-bottom: 30px;
+	@include breakpoint( tablet ) {
+		max-width: 700px;
+	}
 }
 code {
 	padding: 20px;
+	margin-top: 20px;
 	margin-bottom: 30px;
 	line-height: 18px;
 	font-weight: 300;
@@ -112,6 +125,15 @@ table {
 	margin-bottom: 30px;
 	color: #95989A;
 	background: #D5D5D5;
+	thead {
+		tr {
+			th {
+				padding: 10px;
+				background: #eee;
+				font-size: 1.8rem;
+			}
+		}
+	}
 	tbody {
 		tr {
 			th {
@@ -128,7 +150,9 @@ table {
 		}
 	}
 }
-
+iframe {
+	max-width: 100%;
+}
 .alignleft {
 	@include breakpoint( tablet ) {
 		margin-right: 30px;

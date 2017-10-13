@@ -13,6 +13,9 @@
 	}
 	&__list {
 		width: 100%;
+		li {
+			list-style: none;
+		}
 		.comment {
 			list-style-type: none;
 		}
@@ -32,7 +35,9 @@
 	.comment-body {
 		position: relative;
 		.comment-author {
-			margin-bottom: 20px;
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
 			&::after {
 				content: "";
 				clear: both;
@@ -56,10 +61,11 @@
 			}
 		}
 		.comment-meta {
-			display: inline;
-			top: 20px;
-			left: 75px;
-			position: absolute;
+			display: inline-block;
+			margin-bottom: 5px;
+			// top: 20px;
+			// left: 75px;
+			// position: absolute;
 			a {
 				font-weight: 500;
 				font-size: 1.4rem;
@@ -158,4 +164,7 @@
 		background: $color--blue;
 		display: inline-block;
 	}
+}
+.says {
+	width: 10%;
 }
